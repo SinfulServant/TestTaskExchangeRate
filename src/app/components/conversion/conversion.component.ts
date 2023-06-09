@@ -14,6 +14,8 @@ export class ConversionComponent implements OnInit {
   public inputSecond: string = '100.00';
   public firstInputLabel: string
   public secondInputLabel: string
+  public firstPlaceholder: string = '0.00'
+  public secondPlaceholder: string = '0.00'
 
 
 
@@ -33,12 +35,20 @@ export class ConversionComponent implements OnInit {
     if(this.getExchangeRate.listOfRate.value[0]) {
       let result: number = (+this.inputFirst * this.firstCurrency.rate) / this.secondCurrency.rate
       this.inputSecond = result.toFixed(2)
+      if(isNaN(result)) {
+        this.inputSecond = ''
+        this.secondPlaceholder = 'Введіть цифри'
+      }
   }}
 
   getSumInFirstInput(): void {
     if(this.getExchangeRate.listOfRate.value[0]) {
       let result: number = (+this.inputSecond * this.secondCurrency.rate) / this.firstCurrency.rate
       this.inputFirst = result.toFixed(2)
+      if(isNaN(result)) {
+        this.inputFirst = ''
+        this.firstPlaceholder = 'Введіть цифри'
+      }
   }}
 
   constructor(public getExchangeRate: GetExchangeRateService) { }
