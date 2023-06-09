@@ -10,15 +10,15 @@ import { GetExchangeRateService } from 'src/app/services/getExchangeRate.service
 export class HeaderComponent implements OnInit {
   public dollar: Rate
   public euro: Rate
-  
+
   constructor(public getExchangeRateService: GetExchangeRateService) {
 
   }
 
   ngOnInit(): void {
-    this.getExchangeRateService.listOfRate.subscribe(() => {
-      this.dollar = this.getExchangeRateService.listOfRate.value.find(item => item.txt == 'Долар США')
-      this.euro = this.getExchangeRateService.listOfRate.value.find(item => item.txt == 'Євро')
+    this.getExchangeRateService.listOfRate.subscribe((listOfRate) => {
+      this.dollar = listOfRate.find(item => item.txt == 'Долар США')
+      this.euro = listOfRate.find(item => item.txt == 'Євро')
     })
   }
 

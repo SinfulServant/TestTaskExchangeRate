@@ -19,8 +19,6 @@ export class ConversionComponent implements OnInit {
   public secondInputLabel: string
   public secondPlaceholder: string = '0.00'
 
-
-
   setFirstCurrency(i: string): void{
      this.firstCurrency = this.getExchangeRate.listOfRate.value[+i]
      this.firstInputLabel = this.getExchangeRate.listOfRate.value[+i].cc
