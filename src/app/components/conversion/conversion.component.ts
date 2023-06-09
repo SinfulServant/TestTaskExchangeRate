@@ -10,7 +10,7 @@ import { GetExchangeRateService } from 'src/app/services/getExchangeRate.service
 export class ConversionComponent implements OnInit {
   public firstCurrency: Rate
   public secondCurrency: Rate
-  public inputFirst: string = '100.00';
+  public inputFirst: string = '100.00 ';
   public inputSecond: string = '100.00';
   public firstInputLabel: string
   public secondInputLabel: string
@@ -26,7 +26,7 @@ export class ConversionComponent implements OnInit {
   setSecondCurrency(i: string){
     this.secondCurrency = this.getExchangeRate.listOfRate.value[+i]
     this.secondInputLabel = this.getExchangeRate.listOfRate.value[+i].cc
-    this.getSumInFirstInput()
+    this.getSumInSecondInput()
  }
 
   getSumInSecondInput(): void {
