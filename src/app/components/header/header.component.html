@@ -2,7 +2,7 @@
   <div class="container-fluid">
     <h1>Курс валют</h1>
     <div class="tableOfRate">
-      <p *ngIf="this.getExchangeRateService.listOfRate.value[0]">
+      <p *ngIf="this.getExchangeRateService.listOfRate.value.length">
         <strong>$ {{dollar.rate}}</strong>
         <br>
         <strong>€ {{euro.rate}}</strong>

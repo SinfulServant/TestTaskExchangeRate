@@ -20,10 +20,11 @@ getExchangeRate(){
       exchangedate: res[0].exchangedate
     })
     this.listOfRate.next(res.sort((a, b) => {
-      let firstCurrency = a.txt.toLowerCase(), secondCurrency = b.txt.toLowerCase()
+      let firstCurrency = a.txt.toLowerCase()
+      let secondCurrency = b.txt.toLowerCase()
       return firstCurrency < secondCurrency ? -1 : firstCurrency > secondCurrency ? 1 : 0
       }))
-      console.log(this.listOfRate.value)
+      // console.log(this.listOfRate.value)
   })
 }
 

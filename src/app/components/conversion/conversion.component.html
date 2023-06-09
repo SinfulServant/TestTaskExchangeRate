@@ -5,34 +5,34 @@
       <div class="rate-table col d-flex aling-items-center justify-content-center">
 
         <div class="col-5">
-          <div class="input-group input-group-lg">
-            <span class="input-group-text" id="inputFirst-sizing-lg">{{firstInputLabel}}</span>
+          <div class="input-group input-group-md">
+            <span class="input-group-text" id="firstInput-sizing-lg">{{firstInputLabel}}</span>
             <input
-              [(ngModel)]="inputFirst"
+              [(ngModel)]="firstInput"
               (ngModelChange)="getSumInSecondInput()"
               type="text"
               class="form-control"
-              aria-describedby="inputFirst-sizing-sm"
+              aria-describedby="firstInput-sizing-sm"
               placeholder={{firstPlaceholder}}
               aria-label="Sizing example input"
-              aria-describedby="inputFirst-sizing-lg">
+              aria-describedby="firstInput-sizing-lg">
           </div>
         </div>
 
         <div class="col-1"></div>
 
         <div class="col-5">
-          <div class="input-group input-group-lg">
-            <span class="input-group-text" id="inputSecond-sizing-lg">{{secondInputLabel}}</span>
+          <div class="input-group input-group-md">
+            <span class="input-group-text" id="secondInput-sizing-lg">{{secondInputLabel}}</span>
             <input
-              [(ngModel)]="inputSecond"
+              [(ngModel)]="secondInput"
               (ngModelChange)="getSumInFirstInput()"
               type="text"
               class="form-control"
-              aria-describedby="inputSecond-sizing-sm"
+              aria-describedby="secondInput-sizing-sm"
               placeholder={{secondPlaceholder}}
               aria-label="Sizing example input"
-              aria-describedby="inputSecond-sizing-lg">
+              aria-describedby="secondInput-sizing-lg">
           </div>
         </div>
 

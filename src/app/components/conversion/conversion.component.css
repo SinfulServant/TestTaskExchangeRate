@@ -25,14 +25,15 @@ body {
 }
 
 select {
+  width: 25vh;
   appearance: none;
-  margin: 10px;
-  padding: 8px 16px;
+  margin-top: 1vh;
+  padding: 0.5vh 0.5vh;
   border: 1px solid #ccc;
   border-radius: 4px;
   background-color: #fff;
   color: #333;
-  font-size: 14px;
+  font-size: 16px;
 }
 
 select:hover,
@@ -42,11 +43,15 @@ select:focus {
 }
 
 option {
-  padding: 8px 16px;
+  padding: 0.5vh 0.5vh;
   background-color: #fff;
   color: #333;
 }
 
 option:hover {
   background-color: #f5f5f5;
+}
+
+input, option {
+  text-align: center;
 }

@@ -10,6 +10,7 @@ import { GetExchangeRateService } from 'src/app/services/getExchangeRate.service
 export class HeaderComponent implements OnInit {
   public dollar: Rate
   public euro: Rate
+  
   constructor(public getExchangeRateService: GetExchangeRateService) {
 
   }
