@@ -1,0 +1,65 @@
+<div class="main">
+  <div class="container">
+    <div class="curr-exc row">
+      <h2>Актуальний курс:</h2>
+      <div class="rate-table col d-flex aling-items-center justify-content-center">
+
+        <div class="col-5">
+          <div class="input-group input-group-lg">
+            <span class="input-group-text" id="inputFirst-sizing-lg">{{firstInputLabel}}</span>
+            <input
+              [(ngModel)]="inputFirst"
+              (ngModelChange)="getSumInSecondInput()"
+              type="text"
+              class="form-control"
+              aria-describedby="inputFirst-sizing-sm"
+              placeholder="0.00"
+              aria-label="Sizing example input"
+              aria-describedby="inputFirst-sizing-lg">
+          </div>
+        </div>
+
+        <div class="col-1"></div>
+
+        <div class="col-5">
+          <div class="input-group input-group-lg">
+            <span class="input-group-text" id="inputSecond-sizing-lg">{{secondInputLabel}}</span>
+            <input
+              [(ngModel)]="inputSecond"
+              (ngModelChange)="getSumInFirstInput()"
+              type="text"
+              class="form-control"
+              aria-describedby="inputSecond-sizing-sm"
+              placeholder="0.00"
+              aria-label="Sizing example input"
+              aria-describedby="inputSecond-sizing-lg">
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+
+    <div class="row">
+
+      <div class="col-6 d-flex aling-items-center justify-content-center">
+        <select #firstCurrency (change)="setFirstCurrency(firstCurrency.value)">
+          <ng-container  *ngFor="let currency of getExchangeRate.listOfRate.value
+          let i = index">
+            <option [value]="i">{{currency.txt}}</option>
+          </ng-container>
+        </select>
+      </div>
+
+      <div class="col-6 d-flex aling-items-center justify-content-center">
+        <select #secondCurrency (change)="setSecondCurrency(secondCurrency.value)">
+          <ng-container  *ngFor="let currency of getExchangeRate.listOfRate.value
+          let i = index">
+            <option [value]="i">{{currency.txt}}</option>
+          </ng-container>
+        </select>
+      </div>
+
+    </div>
+  </div>
+</div>

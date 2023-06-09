@@ -1,0 +1,12 @@
+<header class="navbar bg-body-tertiary">
+  <div class="container-fluid">
+    <h1>Курс валюти</h1>
+    <div class="tableOfRate">
+      <p *ngIf="this.getExchangeRateService.listOfRate.value[0]">
+        <strong>$ {{dollar.rate}}</strong>
+        <br>
+        <strong>€ {{euro.rate}}</strong>
+      </p>
+    </div>
+  </div>
+</header>

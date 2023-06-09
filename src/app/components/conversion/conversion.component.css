@@ -1,0 +1,52 @@
+body {
+  height: 100vh;
+  background-color: #bb5555;
+}
+
+.rate-table{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #d6f2e7;
+  height: 10vh;
+  width: 20vh;
+  border: solid rgb(199, 199, 199) 1px;
+  border-radius: 8px;
+}
+
+.curr-exc {
+  text-align: center;
+}
+
+.main {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+select {
+  appearance: none;
+  margin: 10px;
+  padding: 8px 16px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  background-color: #fff;
+  color: #333;
+  font-size: 14px;
+}
+
+select:hover,
+select:focus {
+  border-color: #aaa;
+  outline: none;
+}
+
+option {
+  padding: 8px 16px;
+  background-color: #fff;
+  color: #333;
+}
+
+option:hover {
+  background-color: #f5f5f5;
+}
