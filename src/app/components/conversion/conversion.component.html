@@ -42,20 +42,20 @@
 
     <div class="row">
 
-      <div class="col-6 d-flex aling-items-center justify-content-center">
+      <div class="col-6 d-flex aling-items-center justify-content-center div-select">
         <select #firstCurrency (change)="setFirstCurrency(firstCurrency.value)">
           <ng-container  *ngFor="let currency of getExchangeRate.listOfRate.value
           let i = index">
-            <option [value]="i">{{currency.txt}}</option>
+            <option [value]="i" [selected]="i === 13">{{currency.txt}}</option>
           </ng-container>
         </select>
       </div>
 
-      <div class="col-6 d-flex aling-items-center justify-content-center">
+      <div class="col-6 d-flex aling-items-center justify-content-center div-select">
         <select #secondCurrency (change)="setSecondCurrency(secondCurrency.value)">
           <ng-container  *ngFor="let currency of getExchangeRate.listOfRate.value
           let i = index">
-            <option [value]="i">{{currency.txt}}</option>
+            <option [value]="i" [selected]="i === 10">{{currency.txt}}</option>
           </ng-container>
         </select>
       </div>

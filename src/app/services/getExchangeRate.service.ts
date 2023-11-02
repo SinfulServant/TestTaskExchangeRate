@@ -10,6 +10,7 @@ const urlOfRate: string = 'https://bank.gov.ua/NBUStatService/v1/statdirectory/e
 })
 export class GetExchangeRateService {
 public listOfRate = new BehaviorSubject <Rate[]> ([])
+
 getExchangeRate(){
   this.http.get<Rate[]>(urlOfRate).subscribe((res: Rate[]) => {
     res.push({

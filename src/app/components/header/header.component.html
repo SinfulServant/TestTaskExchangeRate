@@ -1,12 +1,10 @@
-<header class="navbar bg-body-tertiary">
-  <div class="container-fluid">
+<header class="navbar">
+  <div>
     <h1>Курс валют</h1>
-    <div class="tableOfRate">
-      <p *ngIf="this.getExchangeRateService.listOfRate.value.length">
-        <strong>$ {{dollar.rate}}</strong>
-        <br>
-        <strong>€ {{euro.rate}}</strong>
-      </p>
+    <p class="actual-course-title" *ngIf="!$isSmallScreen">Курс станом на {{currentDate | date:'dd.M.yyyy'}}: </p>
+    <div class="table-of-rate" *ngIf="this.getExchangeRateService.listOfRate.value.length">
+      <p><strong>$ {{dollar.rate}}</strong></p>
+      <p><strong>€ {{euro.rate}}</strong></p>
     </div>
   </div>
 </header>
